@@ -1,13 +1,15 @@
 import java.util.Scanner;
+import Java.time.localDate;
 public class Ex4 {
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
+  LocalDate data = LocalDate.now();
 		int anoAtual, anoNasc, idade;
 		String resposta = "sim";
 		
 		while(! resposta.equalsIgnoreCase("NÃO")) {
 			System.out.print("Digite o ano atual: ");
-			anoAtual = in.nextInt();
+			anoAtual = data.getYear();
 			System.out.print("Digite o ano de nascimento: ");
 			anoNasc = in.nextInt();
 			idade = anoAtual-anoNasc;
