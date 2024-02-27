@@ -1,5 +1,5 @@
 import java.util.Scanner;
-import Java.time.localDate;
+import java.time.localDate;
 public class Ex4 {
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
