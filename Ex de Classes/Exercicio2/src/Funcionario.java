@@ -3,20 +3,20 @@ public class Funcionario {
 	
 	String nome;
 	double salarioBruto;
-	double imposto;
+	double imposto = 0.25;
 	double salarioLiquido;
 	
 	
-	double calcSalarioLiquido(double salarioBruto) {
-		salarioLiquido = salarioBruto - (salarioBruto*0.07);
+	double calcSalarioLiquido() {
+		salarioLiquido = salarioBruto - (salarioBruto*imposto);
 		
 		return salarioLiquido;
 	}
 	
 	double aumentaSalario(double aumenta) {
-		
-		salarioBruto += aumenta;
-		salarioLiquido = salarioBruto - (salarioBruto*0.07);
+		aumenta = aumenta/100;
+		salarioBruto = salarioBruto + (salarioBruto*aumenta);
+		salarioLiquido = salarioBruto - (salarioBruto*imposto);
 		
 		return salarioLiquido;
 	}
