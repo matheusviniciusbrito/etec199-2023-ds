@@ -8,7 +8,7 @@ public class Imc {
 	void setNome(String nome) {
 		this.nome = nome;
 	}
-	
+
 	void setIdade(int idade) {
 		this.idade = idade;
 	}
@@ -19,6 +19,23 @@ public class Imc {
 	
 	void setAltura(double altura) {
 		this.altura = altura;
+	}
+	
+	//Métodos Get criados apenas para treinar sintaxe (Não os utilizamos)
+	String getNome() {
+		return nome;
+	}
+	
+	int getIdade() {
+		return idade;
+	}
+	
+	double getPeso() {
+		return peso;
+	}
+	
+	double getAltura() {
+		return altura;
 	}
 	
 	

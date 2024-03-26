@@ -8,38 +8,27 @@ public class Main {
 		
 		Imc teste = new Imc();
 		System.out.print("Digite seu nome: ");
-		nome = in.next();
-		teste.setNome(nome);
+		teste.setNome(in.next());
 		System.out.print("Digite sua idade: ");
-		idade = in.nextInt();
-		teste.setIdade(idade);
+		teste.setIdade(in.nextInt());
 		System.out.print("Digite seu peso: ");
-		peso = in.nextDouble();
-		teste.setPeso(peso);
+		teste.setPeso(in.nextDouble());
 		System.out.print("Digite sua altura em metros: ");
-		altura = in.nextDouble();
-		teste.setAltura(altura);
+		teste.setAltura(in.nextDouble());
 		teste.printFinal();
 		
 		System.out.println(teste.calcularImc());
 		
 		Imc teste2 = new Imc();
 		System.out.print("Digite seu nome: ");
-		nome = in.next();
-		teste2.setNome(nome);
+		teste2.setNome(in.next());
 		System.out.print("Digite sua idade: ");
-		idade = in.nextInt();
-		teste2.setIdade(idade);
+		teste2.setIdade(in.nextInt());
 		System.out.print("Digite seu peso: ");
-		peso = in.nextDouble();
-		teste2.setPeso(peso);
+		teste2.setPeso(in.nextDouble());
 		System.out.print("Digite sua altura em metros: ");
-		altura = in.nextDouble();
-		System.out.println();
-		teste2.setAltura(altura);		
-		System.out.println(teste2.calcularImc());
+		teste2.setAltura(in.nextDouble());
 		teste2.printFinal();
-	
 		
 		in.close();
 	}
