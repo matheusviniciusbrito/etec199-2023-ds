@@ -1,7 +1,12 @@
-
+import java.util.*;
 public class Main {
 
 	public static void main(String[] args) {
+		int i = 0;
+		int k = 0;
+		ArrayList<Filme> filmes = new ArrayList<>();
+		String resp = "s";
+		Scanner in = new Scanner(System.in);
 		
 		Filme filme1 = new Filme();
 		filme1.setTitulo("Os vingadores");
@@ -16,22 +21,39 @@ public class Main {
 		System.out.println("Os filmes em cartaz s√£o "+ filme1.getTitulo() + " e " + filme2.getTitulo() + ".");
 		System.out.println();
 		
-		Filme filme3 = new Filme();
-		filme3.setTitulo("Interestelar");
-		filme3.setDuracaoEmMinutos(169);
-		System.out.printf(filme3.exibirDuracaoEmHoras());
+		while (!resp.equalsIgnoreCase("n")) {
+		    filmes.add(cadastrarFilme());
+		    if (filmes.size() % 2 == 0 && filmes.size() >= 2) {
+		        System.out.println("Os filmes em cartaz s„o " +
+		            filmes.get(filmes.size() - 1).getTitulo() + " e " +
+		            filmes.get(filmes.size() - 2).getTitulo());
+		        System.out.println();
+		    }
 
-		Filme filme4 = new Filme();
-		filme4.setTitulo("Harry Potter e as Rel√≠quias da Morte Parte 1");
-		filme4.setDuracaoEmMinutos(145);
-		System.out.printf(filme4.exibirDuracaoEmHoras());
+		    System.out.print("Deseja cadastrar mais um filme? Digite S para continuar e N para parar. ");
+		    resp = in.next();
+		}
 		
-		Filme filme5 = new Filme();
-		filme5.setTitulo("Matrix");
-		filme5.setDuracaoEmMinutos(136);
-		System.out.printf(filme5.exibirDuracaoEmHoras());
-		
-		System.out.println("Os filmes em cartaz s√£o "+ filme3.getTitulo() + ", " + filme4.getTitulo() + " e " + filme5.getTitulo() + ".");
 	}
 
+	public static Filme cadastrarFilme() {
+		String nome;
+		
+		Scanner in = new Scanner(System.in);
+		
+		Filme filmes = new Filme();
+		
+		System.out.print("Insira o nome do filme: ");
+		filmes.setTitulo(in.nextLine());
+		nome = filmes.getTitulo();
+		
+		System.out.print("Insira o tempo de duraÁ„o do filme em minutos: ");
+		filmes.setDuracaoEmMinutos(in.nextInt());
+		
+		System.out.println(filmes.exibirDuracaoEmHoras());
+		
+		
+		return filmes;
+	}
+	
 }
