@@ -46,9 +46,9 @@ public class Cliente {
 		this.valor_Promocional = valor_Promocional;
 	}
 	
-	public void calculaDesconto(double preco){
+    public double calculaDesconto(double preco) {
 		double valorDesconto = preco - (preco*0.1);
 		this.setValor_Promocional(valorDesconto);
-		System.out.println("Cliente comum tem desconto de 10% porcento logo o preço final fica: " + valorDesconto);
+		return valorDesconto;
 	}
 }
