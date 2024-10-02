@@ -22,5 +22,5 @@ public class ContaCorrente extends Conta{
 	public void verificarSaldo() {
 		System.out.println("Seu saldo é: "+ this.getSaldo());
 	}
-		
+
 }

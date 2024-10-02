@@ -14,7 +14,5 @@ public abstract class Conta implements OperacoesConta {
 	public void setSaldo(double saldo) {
 		this.saldo = saldo;
 	}
-	
-	
-	
+
 }
