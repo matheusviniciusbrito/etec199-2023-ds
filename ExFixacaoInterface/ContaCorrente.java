@@ -1,26 +1,36 @@
 
 public class ContaCorrente extends Conta{
-
+	
 	private double limiteEspecial;
 	
+	public ContaCorrente(double saldo, double limiteEspecial) {
+		super(saldo);
+		this.limiteEspecial = limiteEspecial;
+	}
+	
 	public void depositarValor(double valor) {
-		System.out.println("Você depositou R$ "+ valor);
+		System.out.println("Vocï¿½ depositou R$ "+ valor);
 		valor += this.getSaldo();
 		this.setSaldo(valor);
 	}
 	
 	public void sacarValor(double valor) {
-		if(this.getSaldo() > -limiteEspecial) {
-			double temp = this.getSaldo() - valor;
-			this.setSaldo(temp);
-			System.out.println("Você sacou R$ "+ valor + " logo seu saldo atual é: " + temp);
-		} else {
-			System.out.println("Você não tem limite disponível para esse valor de saque.");
-		}
+	    if (this.getSaldo() - valor >= -limiteEspecial) {
+	        double temp = this.getSaldo() - valor;
+	        this.setSaldo(temp);
+	        System.out.println("VocÃª sacou R$ " + valor + " e seu saldo atual Ã©: " + temp);
+	    } else {
+	        // calcula o valor que pode ser sacado atÃ© atingir o limite
+	        double valorPermitido = this.getSaldo() + limiteEspecial; // quanto ainda pode ser sacado
+	        this.setSaldo(-limiteEspecial); // ajusta o saldo ao limite especial
+	        System.out.println("VocÃª tentou sacar R$ " + valor + ", mas sÃ³ pÃ´de sacar R$ " + valorPermitido 
+	                            + " devido ao limite. Seu saldo agora Ã©: " + this.getSaldo());
+	    }
 	}
+
 	
 	public void verificarSaldo() {
-		System.out.println("Seu saldo é: "+ this.getSaldo());
+		System.out.println("Seu saldo ï¿½: "+ this.getSaldo());
 	}
 
 }
