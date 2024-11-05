@@ -9,6 +9,7 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import java.awt.Color;
 
 public class CadastroAmigos extends JFrame {
 
@@ -42,11 +43,14 @@ public class CadastroAmigos extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 854, 480);
 		contentPane = new JPanel();
+		contentPane.setForeground(Color.WHITE);
+		contentPane.setBackground(Color.DARK_GRAY);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		JLabel labelNome = new JLabel("Nome:");
+		labelNome.setForeground(Color.WHITE);
 		labelNome.setFont(new Font("Tahoma", Font.PLAIN, 26));
 		labelNome.setBounds(58, 128, 85, 29);
 		contentPane.add(labelNome);
@@ -58,6 +62,7 @@ public class CadastroAmigos extends JFrame {
 		inputNome.setColumns(10);
 		
 		labelApelido = new JLabel("Apelido:");
+		labelApelido.setForeground(Color.WHITE);
 		labelApelido.setFont(new Font("Tahoma", Font.PLAIN, 26));
 		labelApelido.setBounds(58, 184, 93, 29);
 		contentPane.add(labelApelido);
@@ -69,6 +74,7 @@ public class CadastroAmigos extends JFrame {
 		contentPane.add(inputApelido);
 		
 		labelTelefone = new JLabel("Telefone: ");
+		labelTelefone.setForeground(Color.WHITE);
 		labelTelefone.setFont(new Font("Tahoma", Font.PLAIN, 26));
 		labelTelefone.setBounds(58, 238, 117, 29);
 		contentPane.add(labelTelefone);
@@ -90,6 +96,7 @@ public class CadastroAmigos extends JFrame {
 		contentPane.add(btnVoltar);
 		
 		JLabel titleCadastro = new JLabel("Cadastro de Amigos");
+		titleCadastro.setForeground(Color.WHITE);
 		titleCadastro.setFont(new Font("Tahoma", Font.BOLD, 30));
 		titleCadastro.setBounds(260, 11, 318, 54);
 		contentPane.add(titleCadastro);

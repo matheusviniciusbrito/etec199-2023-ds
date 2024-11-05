@@ -45,7 +45,7 @@ public class ListaAmigos extends JFrame {
 		
 		JButton btnVoltar = new JButton("<");
 		btnVoltar.setFont(new Font("Tahoma", Font.BOLD, 20));
-		btnVoltar.setBounds(10, 11, 49, 43);
+		btnVoltar.setBounds(10, 11, 56, 50);
 		contentPane.add(btnVoltar);
 		
 		JLabel tituloAmigos = new JLabel("Lista de amigos\r\n");
@@ -54,20 +54,16 @@ public class ListaAmigos extends JFrame {
 		tituloAmigos.setBounds(283, 25, 248, 64);
 		contentPane.add(tituloAmigos);
 		
-		JTextPane listaAmigos = new JTextPane();
-		listaAmigos.setBounds(69, 100, 697, 269);
-		contentPane.add(listaAmigos);
-		
 		JButton btnPesquisar = new JButton("Pesquisar\r\n");
-		btnPesquisar.setForeground(Color.WHITE);
-		btnPesquisar.setBackground(Color.DARK_GRAY);
+		btnPesquisar.setForeground(Color.BLACK);
+		btnPesquisar.setBackground(Color.WHITE);
 		btnPesquisar.setFont(new Font("Tahoma", Font.BOLD, 15));
 		btnPesquisar.setBounds(162, 394, 135, 23);
 		contentPane.add(btnPesquisar);
 		
 		JButton btnDeletar = new JButton("Deletar\r\n");
-		btnDeletar.setForeground(Color.WHITE);
-		btnDeletar.setBackground(Color.DARK_GRAY);
+		btnDeletar.setForeground(Color.BLACK);
+		btnDeletar.setBackground(Color.WHITE);
 		btnDeletar.setFont(new Font("Tahoma", Font.BOLD, 15));
 		btnDeletar.setBounds(552, 394, 113, 23);
 		contentPane.add(btnDeletar);
