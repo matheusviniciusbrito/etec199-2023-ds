@@ -7,6 +7,9 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JTextArea;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.Color;
@@ -86,11 +89,25 @@ public class CadastroAmigos extends JFrame {
 		contentPane.add(inputTelefone);
 		
 		JButton btnCadastrar = new JButton("Cadastrar");
+		btnCadastrar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				Conexao bd = new Conexao();
+				bd.conectar();
+			}
+		});
 		btnCadastrar.setFont(new Font("Tahoma", Font.BOLD, 24));
 		btnCadastrar.setBounds(58, 332, 234, 44);
 		contentPane.add(btnCadastrar);
 		
 		JButton btnVoltar = new JButton("Voltar");
+		btnVoltar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Main voltarMain = new Main();
+				voltarMain.setVisible(true);
+				dispose();
+			}
+		});
 		btnVoltar.setFont(new Font("Tahoma", Font.BOLD, 24));
 		btnVoltar.setBounds(544, 332, 234, 44);
 		contentPane.add(btnVoltar);

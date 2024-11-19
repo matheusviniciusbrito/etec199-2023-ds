@@ -46,6 +46,13 @@ public class Main extends JFrame {
 		
 		JButton btnEntrar = new JButton("Entrar");
 		btnEntrar.setFont(new Font("Tahoma", Font.BOLD, 14));
+		btnEntrar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				ListaAmigos entrar = new ListaAmigos();
+				entrar.setVisible(true);
+				dispose();
+			}
+		});
 		btnEntrar.setForeground(Color.BLACK);
 		btnEntrar.setBackground(Color.WHITE);
 		btnEntrar.setBounds(567, 359, 196, 37);
@@ -60,6 +67,9 @@ public class Main extends JFrame {
 		btnCadastrar.setFont(new Font("Tahoma", Font.BOLD, 14));
 		btnCadastrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				CadastroAmigos cadastro = new CadastroAmigos();
+				cadastro.setVisible(true);
+				dispose();
 			}
 		});
 		btnCadastrar.setForeground(Color.BLACK);
